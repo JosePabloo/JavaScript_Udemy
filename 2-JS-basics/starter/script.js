@@ -209,3 +209,52 @@ function totalAmount(bill){
  totalSpent.push(totalAmount(dinner2)); //Pushing the total amount to of the second dinner to the second array
  totalSpent.push(totalAmount(dinner3)); //Pushing the total amount to of the third dinner to the second array
 console.log(totalSpent);
+
+var josePerales = {
+    nameFirst: 'Jose',
+    nameLasr: 'Perales',
+    yearBirth: 1997,
+    college: 'Augsburg',
+    major: 'Computer Science',
+    calcAge: function(yearBirth){
+        return 2018 - this.yearBirth;
+    }
+};
+
+console.log(josePerales);
+console.log(josePerales.yearBirth);
+console.log(josePerales.calcAge());
+
+/*CODING Change 4 */ 
+
+var markObj = {
+    fName: 'Mark',
+    lName: 'Last Name',
+    mass1: 1650,
+    height1: 5.7,
+    bmi: function(mass1, height1){
+        return this.mass1 / (this.height1 * this.height1);
+    }
+};
+
+
+var johnObj = {
+    fName: 'John',
+    lName: 'Last Name',
+    mass1: 185,
+    height1: 5.6,
+    bmi: function(mass1, height1){
+        return this.mass1 / (this.height1 * this.height1);
+    }
+};
+
+if(johnObj.bmi() > markObj.bmi()) {
+    console.log(johnObj.fName + " " + johnObj.lName +" has the heigher BMI at: " + johnObj.bmi());
+}
+else if(markObj.bmi() > johnObj.bmi()){
+    console.log(markObj.fName + " " + markObj.lName +" has the heigher BMI at: " + markObj.bmi());
+}
+else{
+    console.log('both have the same bmi.'+ johnObj.fName +' '+ markObj.fName);
+ 
+}
